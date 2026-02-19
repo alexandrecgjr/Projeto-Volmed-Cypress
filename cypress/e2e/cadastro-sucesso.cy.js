@@ -3,13 +3,17 @@ describe('Página de cadastro', () => {
         cy.visit('/');
     })
 
-    it('Clica no link "Cadastra-se" e redireciona para a página de cadastro da clínica', () => {
+    context('Verifica redirecionamento de página', ()=>{
+        it('Clica no link "Cadastra-se" e redireciona para a página de cadastro da clínica', () => {
         cy.get('[href="/cadastro"]').click();
         cy.location('pathname').should('equal', '/cadastro')
 
+        })
     })
+    
 
-    it('Digita dados da clínica e exibe a área para inserção de dados técnicos', () => {
+    context('Primeira parte da seção de cadastro', ()=>{
+        it('Digita dados da clínica e exibe a área para inserção de dados técnicos', () => {
         cy.get('[href="/cadastro"]').click();
         cy.get('[data-test="inputNome"]').type('Alexandre C');
         cy.get('[data-test="inputCNPJ"]').type('12598432');
@@ -19,9 +23,12 @@ describe('Página de cadastro', () => {
         cy.get('.sc-bcXHqe').click();
         cy.contains('h2', 'Agora, os dados técnicos:').should('be.visible')
         cy.get('.sc-laZRCg').should('exist').should('be.visible')
+        })
     })
 
-    it('Cadastra uma clínica', () => {
+
+    context('Seção de cadastro completa', ()=>{
+        it('Cadastra uma clínica', () => {
         cy.get('[href="/cadastro"]').click();
         cy.get('[data-test="inputNome"]').type('Alexandre C');
         cy.get('[data-test="inputCNPJ"]').type('12598432');
@@ -38,6 +45,8 @@ describe('Página de cadastro', () => {
         cy.contains('Cadastrar').click()
         cy.location('pathname').should('equal', '/login');
 
+        })
     })
+
 
 })
