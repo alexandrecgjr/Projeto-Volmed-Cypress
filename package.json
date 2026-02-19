@@ -4,10 +4,18 @@
   "description": "",
   "main": "cypress.config.js",
   "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint cypress/**/*.js --fix && eslint cypress.config.js --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.0.0",
+    "eslint-plugin-cypress": "^6.0.0",
+    "globals": "^17.3.0"
+  }
 }
