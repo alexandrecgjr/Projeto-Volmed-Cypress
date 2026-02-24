@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:browser:edge": "cypress run --browser edge",
     "test:tablet": "cypress run --config viewportWidth=768 viewportHeight=1024"
-},
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -19,5 +19,8 @@
     "eslint": "^10.0.0",
     "eslint-plugin-cypress": "^6.0.0",
     "globals": "^17.3.0"
+  },
+  "dependencies": {
+    "cypress-plugin-api": "^2.11.2"
   }
 }
