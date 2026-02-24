@@ -2,7 +2,7 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
-         supportFile: false, // Isso remove a obrigatoriedade do arquivo     
+         //supportFile: true, // Isso remove a obrigatoriedade do arquivo     
          setupNodeEvents(on, config) {
       // implement node event listeners here
     },
