@@ -19,7 +19,10 @@
     "@faker-js/faker": "^10.3.0",
     "eslint": "^10.0.0",
     "eslint-plugin-cypress": "^6.0.0",
-    "globals": "^17.3.0"
+    "globals": "^17.3.0",
+    "mocha": "^11.7.5",
+    "mocha-multi-reporters": "^1.5.1",
+    "mochawesome": "^7.1.4"
   },
   "dependencies": {
     "cypress-plugin-api": "^2.11.2"
