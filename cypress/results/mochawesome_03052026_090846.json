@@ -1,0 +1,207 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-03-05T12:08:42.346Z",
+    "end": "2026-03-05T12:08:46.055Z",
+    "duration": 3709,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ef3bc7b7-85c1-4dc5-9ee9-2655eb97c75c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\cadastro-sucesso.cy.js",
+      "file": "cypress\\e2e\\cadastro-sucesso.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "210ab49d-f2b8-44b3-b1c4-abbac74c9ce7",
+          "title": "Página de cadastro",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "6993c9cf-470e-4d35-81f7-b9fdcb17bef0",
+              "title": "Verifica redirecionamento de página",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Clica no link \"Cadastra-se\" e redireciona para a página de cadastro da clínica",
+                  "fullTitle": "Página de cadastro Verifica redirecionamento de página Clica no link \"Cadastra-se\" e redireciona para a página de cadastro da clínica",
+                  "timedOut": null,
+                  "duration": 1301,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[href=\"/cadastro\"]').click();\ncy.location('pathname').should('equal', '/cadastro');",
+                  "err": {},
+                  "uuid": "1607397e-1bfd-409d-a92e-b79709b2362c",
+                  "parentUUID": "6993c9cf-470e-4d35-81f7-b9fdcb17bef0",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "1607397e-1bfd-409d-a92e-b79709b2362c"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1301,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "8507fe67-05c7-4885-b6fb-f27a9aac7e2d",
+              "title": "Primeira parte da seção de cadastro",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Digita dados da clínica e exibe a área para inserção de dados técnicos",
+                  "fullTitle": "Página de cadastro Primeira parte da seção de cadastro Digita dados da clínica e exibe a área para inserção de dados técnicos",
+                  "timedOut": null,
+                  "duration": 1856,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[href=\"/cadastro\"]').click();\ncy.get('[data-test=\"inputNome\"]').type('Alexandre C');\ncy.get('[data-test=\"inputCNPJ\"]').type('12598432');\ncy.get('[data-test=\"inputEmail\"]').type('alexandre@teste.com');\ncy.get('[data-test=\"inputSenha\"]').type('Senha123');\ncy.get('[data-test=\"inputSenhaVerificada\"]').type('Senha123');\ncy.get('.sc-bcXHqe').click();\ncy.contains('h2', 'Agora, os dados técnicos:').should('be.visible');\ncy.get('.sc-laZRCg').should('exist').should('be.visible');",
+                  "err": {},
+                  "uuid": "1fc09b1e-11cb-4f63-9c27-eecaaf109059",
+                  "parentUUID": "8507fe67-05c7-4885-b6fb-f27a9aac7e2d",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "1fc09b1e-11cb-4f63-9c27-eecaaf109059"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1856,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "183910b5-2b77-495e-b3ec-b6a1b04249e2",
+              "title": "Seção de cadastro completa",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Cadastra uma clínica",
+                  "fullTitle": "Página de cadastro Seção de cadastro completa Cadastra uma clínica",
+                  "timedOut": null,
+                  "duration": 375,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[href=\"/cadastro\"]').click();\ncy.get('[data-test=\"inputNome\"]').type(_faker.fakerPT_BR.internet.userName());\ncy.get('[data-test=\"inputCNPJ\"]').type(_faker.fakerPT_BR.string.numeric());\ncy.get('[data-test=\"inputEmail\"]').type(_faker.fakerPT_BR.internet.email());\ncy.get('[data-test=\"inputSenha\"]').type(senha);\ncy.get('[data-test=\"inputSenhaVerificada\"]').type(senha);\ncy.get('.sc-bcXHqe').click();\ncy.get('[data-test=\"inputTelefone\"]').type(_faker.fakerPT_BR.phone.number());\ncy.get('[data-test=\"inputCEP\"]').type(_faker.fakerPT_BR.location.zipCode());\ncy.get('[data-test=\"inputRua\"]').type(_faker.fakerPT_BR.location.street());\ncy.get('[data-test=\"inputNumero\"]').type(_faker.fakerPT_BR.location.buildingNumber());\ncy.get('[data-test=\"inputComplemento\"]').type(_faker.fakerPT_BR.location.secondaryAddress({\n  abbreviated: true\n}));\ncy.get('[data-test=\"inputEstado\"]').type(_faker.fakerPT_BR.location.state());\ncy.contains('Cadastrar').click();\ncy.location('pathname').should('equal', '/login');",
+                  "err": {
+                    "message": "TypeError: _faker.fakerPT_BR.internet.userName is not a function",
+                    "estack": "TypeError: _faker.fakerPT_BR.internet.userName is not a function\n    at Context.eval (webpack://projeto-volmed-cypress/./cypress/e2e/cadastro-sucesso.cy.js:36:62)\n    at runnable.fn (http://localhost:3000/__cypress/runner/cypress_runner.js:146600:19)\n    at callFn (http://localhost:3000/__cypress/runner/cypress_runner.js:165734:21)\n    at Runnable.run (http://localhost:3000/__cypress/runner/cypress_runner.js:165721:7)\n    at <unknown> (http://localhost:3000/__cypress/runner/cypress_runner.js:171819:30)\n    at PassThroughHandlerContext.finallyHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:4042:23)\n    at PassThroughHandlerContext.tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:1546:18)",
+                    "diff": null
+                  },
+                  "uuid": "a47bd42d-b61c-4a64-91bc-26f734e30f36",
+                  "parentUUID": "183910b5-2b77-495e-b3ec-b6a1b04249e2",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "a47bd42d-b61c-4a64-91bc-26f734e30f36"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 375,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.3.2"
+    }
+  }
+}

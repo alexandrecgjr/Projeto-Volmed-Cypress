@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-05T12:08:52.999Z",
+    "end": "2026-03-05T12:08:59.407Z",
+    "duration": 6408,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "06571ce9-cbc1-4a90-8006-2e556f1165c6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\dashboard.cy.js",
+      "file": "cypress\\e2e\\dashboard.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0bfb45c0-99d3-4152-bf8e-14de84c570c8",
+          "title": "Usuário logado na página de dashboard",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "bd6e2138-780a-40d8-9637-2a46b9676346",
+              "title": "Modal de cadastro de especialista",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Seleciona o botão checkbox \"Atende por plano?\" após preenchimento do formulário para visualizar os planos de saúde",
+                  "fullTitle": "Usuário logado na página de dashboard Modal de cadastro de especialista Seleciona o botão checkbox \"Atende por plano?\" após preenchimento do formulário para visualizar os planos de saúde",
+                  "timedOut": null,
+                  "duration": 6254,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('@especialistas').then(dados => {\n  const especialista = dados.especialistas[0];\n  cy.cadastraEspecialista(especialista.nome, especialista.email, especialista.senha, especialista.especialidade, especialista.crm, especialista.imagem, especialista.cep, especialista.rua, especialista.numero, especialista.complemento, especialista.estado);\n  cy.get('[type=\"checkbox\"]').check();\n  cy.get('[type=\"checkbox\"]').last().scrollIntoView({\n    easing: 'linear'\n  });\n  cy.get('.MuiFormGroup-root').children().each($checkbox => {\n    cy.wrap($checkbox).should('be.visible');\n  });\n});",
+                  "err": {},
+                  "uuid": "6f4d150d-40b8-4091-8dd9-50f7143f2344",
+                  "parentUUID": "bd6e2138-780a-40d8-9637-2a46b9676346",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "6f4d150d-40b8-4091-8dd9-50f7143f2344"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 6254,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.3.2"
+    }
+  }
+}
